@@ -1,0 +1,92 @@
+name:           BiobaseGFF3
+version:        0.1.0.0
+author:         Florian Eggenhofer
+maintainer:     egg@informatik.uni-leipzig.de
+homepage:       https://github.com/eggzilla/BiobaseGFF3
+bug-reports:    https://github.com/eggzilla/BiobaseGFF3/issues
+copyright:      Florian Eggenhofer, 2018
+category:       Bioinformatics
+license:        GPL-3
+license-file:   LICENSE
+build-type:     Simple
+stability:      experimental
+cabal-version:  >= 1.10.0
+tested-with:    GHC == 8.4.3
+synopsis:       GFF3 related tools
+description:
+                This library contains GFF3-related functionality:
+                .
+                - Parser for GFF3
+
+extra-source-files:
+  changelog.md
+  README.md
+  tests/succeed/*.golden
+  tests/succeed/*.test
+
+library
+  build-depends: base             >= 4.7      && < 5.0
+               , aeson            >= 1.0
+               , attoparsec       >= 0.13
+               , binary           >= 0.7
+               , bytestring
+               , cereal           >= 0.4
+               , containers
+               , deepseq          >= 1.3
+               , directory
+               , vector           >= 0.10
+
+  default-language:
+    Haskell2010
+  default-extensions: DeriveGeneric
+                    , MultiParamTypeClasses
+                    , TemplateHaskell
+                    , TypeFamilies
+                    , TypeOperators
+  exposed-modules:
+    Biobase.GFF3
+    Biobase.GFF3.Import
+    Biobase.GFF3.Export
+    Biobase.GFF3.Types
+
+  ghc-options:
+    -O2
+
+test-suite properties
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    properties.hs
+  ghc-options:
+    -O2 -threaded -rtsopts -with-rtsopts=-N
+  hs-source-dirs:
+    tests
+  default-language:
+    Haskell2010
+  default-extensions: BangPatterns
+                    , OverloadedStrings
+                    , ScopedTypeVariables
+                    , TemplateHaskell
+  build-depends: base
+               , bytestring
+               , containers
+               , filepath
+               , split                      >= 0.2.3
+               , tasty                      >= 0.11
+               , tasty-quickcheck           >= 0.8
+               , tasty-silver               >= 3.1.9
+               , tasty-th                   >= 0.1
+               , text
+               --
+               , BiobaseGFF3
+
+
+
+source-repository head
+  type:     git
+  location: https://github.com/eggzilla/BiobaseGFF3
+
+source-repository this
+  type:     git
+  location: https://github.com/choener/BiobaseGFF3/tree/0.1.0.0
+  tag:      0.1.0.0
