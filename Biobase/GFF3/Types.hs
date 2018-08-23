@@ -17,21 +17,22 @@ import Debug.Trace
 import Text.Printf
 
   -- | Datastructure for GFF3 http://gmod.org/wiki/GFF3
-  data GFF3 = GFF3
+data GFF3 = GFF3
     { gff3entries :: !(V.Vector GFF3Entry),
-      gff3sequence :: !B.ByteString,
+      gff3sequence :: !B.ByteString
     }
     deriving (Show, Eq)
-  -- | Datastructure for data lines of GFF3 http://gmod.org/wiki/GFF3
-  data GFF3Entry = GFF3Entry
+
+-- | Datastructure for data lines of GFF3 http://gmod.org/wiki/GFF3
+data GFF3Entry = GFF3Entry
     { gff3Seqid :: !B.ByteString,
       gff3Source :: !B.ByteString,
       gff3Type :: !B.ByteString,
       gff3Start :: Int,
       gff3End :: Int,
       gff3Score :: Int,
-      gff3Strand :: Int,
+      gff3Strand :: Char,
       gff3Phase :: Int,
-      gff3Attributes :: [!B.ByteString]
+      gff3Attributes :: !(V.Vector B.ByteString)
     }
     deriving (Show, Eq)
