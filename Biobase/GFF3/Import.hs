@@ -45,11 +45,16 @@ parseGFF3s = go
 
 genParseGFF3 :: Parser GFF3
 genParseGFF3 = do
-  string "##gff-version 3"
-  endOfLine
+  skipMany genParseGFF3Comment
   _entry <- many' (try genParseGFF3Entry) <?> "GFF3 entry"
   return $ GFF3 (V.fromList _entry) B.empty
 
+genParseGFF3Comment :: Parser String
+genParseGFF3Comment = do
+  string "#"
+  takeWhile1 (/= '\n')
+  endOfLine
+  return $ ""
 genParseGFF3Entry :: Parser GFF3Entry
 genParseGFF3Entry = do
   _gff3Seqid <- takeWhile1 (/= '\t') <?> "seqid"
@@ -70,6 +75,7 @@ genParseGFF3Entry = do
   char '\t'
   _gff3Attributes <- many' (try genParseGFF3Attribute) <?> "GFF3 attributes"
   endOfLine
+  skipMany genParseGFF3Comment
   return $ GFF3Entry (B.fromStrict _gff3Seqid) (B.fromStrict _gff3Source) (B.fromStrict _gff3Type) _gff3Start _gff3End _gff3Score _gff3Strand _gff3Phase (V.fromList _gff3Attributes)
 
 genParseGFF3Attribute :: Parser B.ByteString
