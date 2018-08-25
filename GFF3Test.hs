@@ -1,4 +1,5 @@
 -- | GFF3 test script
+--wget ftp://ftp.ensemblgenomes.org/pub/bacteria/release-40/gff3/bacteria_18_collection/escherichia_coli_o157_h7_str_edl933/Escherichia_coli_o157_h7_str_edl933.ASM666v1.37.gff3.gz
 --runghc -package-db --ghc-arg=.cabal-sandbox/x86_64-linux-ghc-8.0.1-packages.conf.d/ GFF3Test.hs tab.out
 --runghc -package-db --ghc-arg=dist-newstyle/packagedb/ghc-8.4.3/ GFF3Test.hs Escherichia_coli_o157_h7_str_edl933.ASM666v1.37.gff3
 
@@ -21,4 +22,4 @@ main = do
   putStrLn "Test:"
   inputBlast <- L8.readFile input_file
   let gffOutput = parseGFF3s (L8.drop 0 inputBlast)
-  print gffOutput
+  print (head gffOutput)

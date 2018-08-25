@@ -30,9 +30,9 @@ data GFF3Entry = GFF3Entry
       gff3Type :: !B.ByteString,
       gff3Start :: Int,
       gff3End :: Int,
-      gff3Score :: Int,
+      gff3Score :: !B.ByteString,
       gff3Strand :: Char,
-      gff3Phase :: Int,
+      gff3Phase :: B.ByteString,
       gff3Attributes :: !(V.Vector B.ByteString)
     }
     deriving (Show, Eq)
