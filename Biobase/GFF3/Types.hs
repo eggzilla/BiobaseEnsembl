@@ -21,7 +21,7 @@ data GFF3 = GFF3
     { gff3entries :: !(V.Vector GFF3Entry),
       gff3sequence :: !B.ByteString
     }
-    deriving (Show, Eq)
+    deriving (Eq)
 
 -- | Datastructure for data lines of GFF3 http://gmod.org/wiki/GFF3
 data GFF3Entry = GFF3Entry
@@ -35,4 +35,4 @@ data GFF3Entry = GFF3Entry
       gff3Phase :: B.ByteString,
       gff3Attributes :: !(V.Vector B.ByteString)
     }
-    deriving (Show, Eq)
+    deriving (Eq)

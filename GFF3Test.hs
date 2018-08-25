@@ -15,6 +15,7 @@ import Control.Monad
 import qualified Data.ByteString.Lazy.Char8 as L8
 import Biobase.GFF3.Import
 import Biobase.GFF3.Types
+import Biobase.GFF3.Export
 
 main = do
   args <- getArgs
