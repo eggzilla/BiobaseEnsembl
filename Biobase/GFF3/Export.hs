@@ -8,11 +8,11 @@ import qualified Data.Vector as V
 import Data.List
 
 instance Show GFF3 where
-  show (GFF3 _entries _sequence)
-    | not (null _entries) = header ++ entriesString
+  show (GFF3 _Entries _Sequence)
+    | not (null _Entries) = header ++ entriesString
     | otherwise = header
     where header = "##gff-version 3\n"
-          entriesString =  concatMap show _entries
+          entriesString =  concatMap show _Entries
 
 instance Show GFF3Entry where
   show (GFF3Entry _gff3Seqid _gff3Source _gff3Type _gff3Start _gff3End _gff3Score _gff3Strand _gff3Phase _gff3Attributes) =

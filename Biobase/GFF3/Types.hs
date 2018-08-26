@@ -18,8 +18,8 @@ import Text.Printf
 
   -- | Datastructure for GFF3 http://gmod.org/wiki/GFF3
 data GFF3 = GFF3
-    { gff3entries :: !(V.Vector GFF3Entry),
-      gff3sequence :: !B.ByteString
+    { gff3Entries :: !(V.Vector GFF3Entry),
+      gff3Sequence :: !B.ByteString
     }
     deriving (Eq)
 
