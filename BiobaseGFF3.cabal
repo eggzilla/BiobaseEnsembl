@@ -1,7 +1,7 @@
 name:           BiobaseGFF3
 version:        0.1.0.0
 author:         Florian Eggenhofer
-maintainer:     egg@informatik.uni-leipzig.de
+maintainer:     egg@informatik.uni-freiburg.de
 homepage:       https://github.com/eggzilla/BiobaseGFF3
 bug-reports:    https://github.com/eggzilla/BiobaseGFF3/issues
 copyright:      Florian Eggenhofer, 2018
@@ -11,12 +11,14 @@ license-file:   LICENSE
 build-type:     Simple
 stability:      experimental
 cabal-version:  >= 1.10.0
-tested-with:    GHC == 8.4.3
+tested-with:    GHC == 8.0.2, GHC == 8.2.2, GHC == 8.4.4, GHC == 8.6.2
 synopsis:       GFF3 related tools
 description:
                 This library contains GFF3-related functionality:
                 .
                 - Parser for GFF3
+                .
+                - Datastructure for GFF3 
 
 extra-source-files:
   changelog.md
@@ -59,5 +61,5 @@ source-repository head
 
 source-repository this
   type:     git
-  location: https://github.com/choener/BiobaseGFF3/tree/0.1.0.0
+  location: https://github.com/eggzilla/BiobaseGFF3/tree/0.1.0.0
   tag:      0.1.0.0
