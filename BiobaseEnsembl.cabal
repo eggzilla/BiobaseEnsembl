@@ -15,7 +15,7 @@ tested-with:    GHC == 8.0.2, GHC == 8.2.2, GHC == 8.4.4, GHC == 8.6.2
 synopsis:       Ensembl related datastructures and functions
 description:
                 This library contains high through put sequencing and Ensembl-related functionality:
-                - Datastructures to query ensembl REST interface
+                - Datastructures to query Ensembl REST interface
                 .
                 - Parser for GFF3
                 .
