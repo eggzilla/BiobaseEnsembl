@@ -1,6 +1,6 @@
-[![Build Status](https://travis-ci.org/eggzilla/BiobaseGFF3.svg?branch=master)](https://travis-ci.org/eggzilla/BiobaseGFF3)
+# BiobaseEnsembl [![Build Status](https://travis-ci.org/eggzilla/BiobaseEnsembl.svg?branch=master)](https://travis-ci.org/eggzilla/BiobaseEnsembl)
 
-# BiobaseGFF3
-
-This library contains GFF3-related functionality.
+This library contains [Ensembl](https://www.ensembl.org/index.html) related functions and datastructures:
+  * GFF3
+  * EnsemblGenomes Query Datastructures
 
