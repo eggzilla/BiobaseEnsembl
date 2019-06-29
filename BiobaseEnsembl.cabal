@@ -17,9 +17,9 @@ description:
                 This library contains high through put sequencing and Ensembl-related functionality:
                 - Datastructures to query Ensembl REST interface
                 .
-                - Parser for GFF3
+                - Parser for GFF3/GTF
                 .
-                - Datastructure for GFF3
+                - Datastructure for GFF3/GTF
 
 extra-source-files:
   changelog.md
@@ -53,6 +53,10 @@ library
     Biobase.GFF3.Import
     Biobase.GFF3.Export
     Biobase.GFF3.Types
+    Biobase.GTF
+    Biobase.GTF.Import
+    Biobase.GTF.Export
+    Biobase.GTF.Types
     Biobase.Ensembl.REST.Types
 
   ghc-options:
