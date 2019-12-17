@@ -29,7 +29,7 @@ gff3FromFile filePath = do
   fileExists <- doesFileExist filePath
   if fileExists
      then parseGFF3s <$> B.readFile filePath
-     else fail "# GFF3 file \"%s\" does not exist\n" filePath
+     else fail ("# GFF3 file \"%s\" does not exist\n" ++ filePath)
 
 -- | Read a lazy bytestring and stream out a list of @GFF3s@'s.
 -- In case, there is a parse error "late" in the file, we might have

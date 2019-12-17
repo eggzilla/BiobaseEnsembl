@@ -1,5 +1,5 @@
 name:           BiobaseEnsembl
-version:        0.1.0.0
+version:        0.2.0.0
 author:         Florian Eggenhofer
 maintainer:     egg@informatik.uni-freiburg.de
 homepage:       https://github.com/eggzilla/BiobaseEnsembl
@@ -64,5 +64,5 @@ source-repository head
 
 source-repository this
   type:     git
-  location: https://github.com/eggzilla/BiobaseEnsembl/tree/0.1.0.0
-  tag:      0.1.0.0
+  location: https://github.com/eggzilla/BiobaseEnsembl/tree/0.2.0.0
+  tag:      0.2.0.0
