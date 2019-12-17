@@ -16,7 +16,7 @@ import Control.Monad
 import Debug.Trace
 import Text.Printf
 
-  -- | Datastructure for GFF3 http://gmod.org/wiki/GFF3
+-- | Datastructure for GFF3 http://gmod.org/wiki/GFF3
 data GFF3 = GFF3
     { gff3Entries :: !(V.Vector GFF3Entry),
       gff3Sequence :: !B.ByteString
