@@ -22,7 +22,7 @@ description:
                 - Datastructure for GFF3
 
 extra-source-files:
-  changelog.md
+  ChangeLog.md
   README.md
 
 library
