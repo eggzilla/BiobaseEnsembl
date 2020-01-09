@@ -53,6 +53,10 @@ library
     Biobase.GFF3.Import
     Biobase.GFF3.Export
     Biobase.GFF3.Types
+    Biobase.GTF
+    Biobase.GTF.Import
+    Biobase.GTF.Export
+    Biobase.GTF.Types
     Biobase.Ensembl.REST.Types
 
   ghc-options:
@@ -64,5 +68,5 @@ source-repository head
 
 source-repository this
   type:     git
-  location: https://github.com/eggzilla/BiobaseEnsembl/tree/0.2.0.0
-  tag:      0.2.0.0
+  location: https://github.com/eggzilla/BiobaseEnsembl/tree/0.2.0.1
+  tag:      0.2.0.1
