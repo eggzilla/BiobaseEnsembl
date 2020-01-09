@@ -1,5 +1,5 @@
 name:           BiobaseEnsembl
-version:        0.2.0.0
+version:        0.2.0.1
 author:         Florian Eggenhofer
 maintainer:     egg@informatik.uni-freiburg.de
 homepage:       https://github.com/eggzilla/BiobaseEnsembl
@@ -11,7 +11,7 @@ license-file:   LICENSE
 build-type:     Simple
 stability:      experimental
 cabal-version:  >= 1.10.0
-tested-with:    GHC == 8.0.2, GHC == 8.2.2, GHC == 8.4.4, GHC == 8.6.5, GHC == 8.8.1
+tested-with:    GHC == 8.6.5, GHC == 8.8.1
 synopsis:       Ensembl related datastructures and functions
 description:
                 This library contains high through put sequencing and Ensembl-related functionality:
